@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #2C3E50;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.profile-pic {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+    width: 300px; 
+    height: 300px; 
+}
+
+.profile-pic img {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    
+}
+
+.image1 {
+    position: relative;
+    z-index: 1;
+}
+
+.image2 {
+    position: relative;
+    z-index: 2;
+}
+
+.profile-text {
+    text-align: center; 
+}
+
+.profile-text h1, .profile-text h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.highlight {
+    color: #FF6F59;
+    font-size: 36px; 
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-links img {
+    margin: 0 25px;
+    width: 50px; 
+    transition: transform 0.3s ease, color 0.3s ease; 
+    height: auto;
+}
+
+
+.social-links img:hover {
+    transform: scale(1.1); 
+    filter: brightness(1.2); 
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .profile{
+        flex-direction: column;
+    }
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+    }
+
+    .profile-text h1, .profile-text h2 {
+        font-size: 20px;
+    }
+
+    .highlight {
+        font-size: 28px;
+    }
+
+    .social-links img {
+        width: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .profile {
+        
+        height: auto;
+        padding: 20px;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-text h1, .profile-text h2 {
+        font-size: 18px;
+    }
+
+    .highlight {
+        font-size: 26px;
+    }
+
+    .social-links img {
+        width: 35px;
+    }
+}
