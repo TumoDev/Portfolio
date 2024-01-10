@@ -6,13 +6,16 @@
 
 html {
     height: 100%;
+    max-height: 100%; 
+    overflow-x: hidden; 
+    overflow-y: auto;
 }
+
 
 body {
     margin: 0;
     padding: 0;
     background-color: #2C3E50;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,7 +28,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 60vh;
+    margin-top: 15vh;
 }
 
 .profile-pic {
@@ -72,7 +76,8 @@ body {
 .social-links {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 2vh;
+    margin-bottom: 10vh;
 }
 
 .social-links img {
@@ -88,51 +93,133 @@ body {
     filter: brightness(1.2); 
 }
 
+.aboutme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.aboutme-text{
+    box-shadow: 5px 5px 4px 0px rgba(0, 0, 0, 0.30);
+    padding: 20px;
+    margin: 30px;
+    display: block; 
+    justify-content: center; 
+    position: relative;
+    border-radius: 17px;
+    background: white;
+    width: 420px; 
+    height: 300px; 
+    font-family: 'Inter', sans-serif;
+}
+
+
+.aboutme h3{
+    color: #FF6F59;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 10px;
+}
+
+.aboutme p{
+    color: #2C3E50;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.aboutme-image{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+    width: 500px; 
+    height: 500px;  
+}
+
+.aboutme-image img {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    
+}
+
+
 /* Media Queries */
 @media (max-width: 768px) {
-    .profile{
+    .aboutme-text, .aboutme-image {
+        width: 90%; 
+    }
+    .aboutme-text h3, .aboutme p {
+        font-size: smaller; 
+    }
+
+    .profile {
         flex-direction: column;
+        height: auto;
     }
     .profile-pic {
         width: 200px;
         height: 200px;
     }
-
     .profile-text h1, .profile-text h2 {
         font-size: 20px;
     }
-
     .highlight {
         font-size: 28px;
     }
-
     .social-links img {
         width: 40px;
+    }
+    .aboutme {
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+    .aboutme-text, .aboutme-image {
+        width: 100%;
+        height: auto;
+    }
+    .aboutme-text {
+        padding: 20px;
     }
 }
 
 @media (max-width: 480px) {
-    
-    .profile {
-        
-        height: auto;
-        padding: 20px;
-    }
-
     .profile-pic {
         width: 150px;
         height: 150px;
     }
-
     .profile-text h1, .profile-text h2 {
         font-size: 18px;
     }
-
     .highlight {
         font-size: 26px;
     }
-
     .social-links img {
         width: 35px;
+    }
+    .aboutme-text {
+        width: auto;
+        padding: 15px;
+    }
+    .aboutme-image {
+        margin-top: 20px;
+    }
+
+    .aboutme-text {
+        padding: 15px; 
+    }
+    .aboutme h3 {
+        font-size: 20px; 
+    }
+    .aboutme p {
+        font-size: 14px; 
     }
 }
